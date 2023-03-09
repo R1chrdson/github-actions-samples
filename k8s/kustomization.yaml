@@ -8,4 +8,4 @@ namespace: hello-gitops
 images:
 - name: hello-gitops
   newName: r1chardson/hello-gitops
-  newTag: 9570735d2ffdd586df151db6f513e12e1ca59345
+  newTag: 6dcdb2f2b32671198edb67bb8bb6249a45c5ba27

@@ -4,8 +4,8 @@ resources:
 - deployment.yaml
 - service.yaml
 - ingress.yaml
-namespace: hello-gitops
+namespace: python-app-green
 images:
 - name: hello-gitops
   newName: r1chardson/hello-gitops
-  newTag: b5b29e643bdc31a12fc84ad4266f7cfc7257b8b9
+  newTag: 2f69b1a177b5e2277820beea0f8e9273b7bba19c

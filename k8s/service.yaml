@@ -8,7 +8,6 @@ spec:
   ports:
     - name: http
       port: 8050
-      targetPort: 80
   selector:
     app: hello-gitops
   type: ClusterIP

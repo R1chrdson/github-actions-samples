@@ -6,6 +6,6 @@ resources:
 - ingress.yaml
 namespace: hello-gitops
 images:
-- name: hello-gitops
-  newName: elisska/hello-gitops
-  newTag: 66430e101949c340725a99f5fefa26f554fc2806
+- name: hello-gitops-1
+  newName: r1chardson/hello-gitops-1
+  newTag: new_tag

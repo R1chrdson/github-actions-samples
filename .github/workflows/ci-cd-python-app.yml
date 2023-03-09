@@ -138,13 +138,12 @@ jobs:
     - name: Deploy updated Kubernetes resources
       run: |
         kubectl apply -k k8s/ 
-   
-    # DO SOME CHECKS HERE BEFORE COMMIT
-    #- name: Deploy updated Kubernetes resources
-    #  run: |
-    #    kubectl apply -k k8s/
 
-    # REMOVE OLD DEPLOYMENT!!
+    - name: Wait for the new version to be running
+      run: |
+        kubectl config set-context --current --namespace ${{ env.NEW_NAMESPACE }}
+        kubectl rollout status deploy hello-gitops -w
+        
     - name: Remove old namespace
       run: |
         namespacePresentOld=`kubectl get ns | grep ${{ env.OLD_NAMESPACE }} | wc -l`
